@@ -22,6 +22,8 @@ public class CardModule extends LinearLayout {
     int mColorBackgroundData, mIconModuleData;
     String mTextTitleData, mTextDescriptionData;
 
+    private OnClickListener onClickListener;
+
     public CardModule(Context context) {
         super(context);
         initView(context, null);
@@ -48,7 +50,19 @@ public class CardModule extends LinearLayout {
             mTextDescriptionData = typedArray.getString(R.styleable.CardModule_descriptionModule);
             typedArray.recycle();
             mapView(view);
+            event(view);
         }
+    }
+
+    private void event(View view) {
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onClickListener != null){
+                    onClickListener.onClick();
+                }
+            }
+        });
     }
 
     private void mapView(View view) {
@@ -63,5 +77,13 @@ public class CardModule extends LinearLayout {
         mIcon.setImageResource(mIconModuleData);
         mTvTitle.setText(mTextTitleData);
         mTvDescription.setText(mTextDescriptionData);
+    }
+
+    public void setOnClickListener(OnClickListener onClickListener){
+        this.onClickListener = onClickListener;
+    }
+
+    public interface OnClickListener{
+        public void onClick();
     }
 }

@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <com.example.customview18102021.CardModule
+        android:id="@+id/moduleAddress"
         app:backgroundIcon="@color/purple_200"
         app:iconModule="@drawable/ic_address"
         app:titleModule="Address"
@@ -15,6 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <com.example.customview18102021.CardModule
+        android:id="@+id/modulePrivacy"
         app:backgroundIcon="@color/purple_200"
         app:iconModule="@drawable/ic_privacy"
         app:titleModule="Privacy"
