@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CardModule">
+        <attr name="backgroundIcon" format="color"/>
+        <attr name="iconModule" format="reference"/>
+        <attr name="titleModule" format="string"/>
+        <attr name="descriptionModule" format="string"/>
+    </declare-styleable>
+</resources>
