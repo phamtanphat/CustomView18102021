@@ -6,4 +6,5 @@
         <attr name="titleModule" format="string"/>
         <attr name="descriptionModule" format="string"/>
     </declare-styleable>
+
 </resources>
